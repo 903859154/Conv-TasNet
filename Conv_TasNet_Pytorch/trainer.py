@@ -231,7 +231,7 @@ class Trainer():
                 train_losses.append(train_loss)
                 val_losses.append(val_loss)
 
-                if val_loss > best_loss:
+                if val_loss < best_loss:
                     no_impr += 1
                     self.logger.info('no improvement, best loss: {:.4f}'.format(self.scheduler.best))
                 else:
